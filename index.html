@@ -39,7 +39,7 @@
     .photo{
       width:240px;
       height:240px;
-      border-radius:18px;
+      border-radius:24px;
       object-fit:cover;
       border:1px solid var(--border);
       flex:0 0 auto;
@@ -96,6 +96,7 @@
       border:1px solid var(--border);
       border-radius:16px;
       padding:16px;
+      background:#fff;
     }
     .proj p{ margin:8px 0; }
     .meta{
@@ -116,9 +117,63 @@
     ul{ margin:10px 0 0 18px; }
     li{ margin:4px 0; }
 
+    /* EXPERIENCE TIMELINE */
+    .timeline{
+      position: relative;
+      margin-top: 10px;
+      padding-left: 22px;
+    }
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left: 8px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: #e6e6e6;
+      border-radius: 2px;
+    }
+    .t-item{
+      position: relative;
+      margin: 16px 0;
+      padding-left: 14px;
+    }
+    .t-dot{
+      position:absolute;
+      left: -2px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--link);
+      box-shadow: 0 0 0 4px #eef3ff;
+    }
+    .t-card{
+      border:1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      background: #fff;
+    }
+    .t-header{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    .t-role{ font-weight: 800; }
+    .t-org{ color: var(--muted); font-weight: 600; }
+    .t-date{
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .t-card ul{ margin: 10px 0 0 18px; }
+
     @media (max-width: 760px){
       .hero{ flex-direction:column-reverse; align-items:flex-start; }
-      .photo{ width:110px; height:110px; }
+      .photo{ width:160px; height:160px; }
       .grid{ grid-template-columns: 1fr; }
       .skills{ grid-template-columns: 1fr; }
     }
@@ -136,13 +191,19 @@
         New York, USA
       </p>
 
+      <!-- SHORT ABOUT (top) -->
+      <p style="margin-top:10px; max-width:760px;">
+        I turn raw data into decision-ready insights through analytics dashboards, data modeling,
+        and machine learning — using SQL, Python, and Power BI to support business and operational teams.
+      </p>
+
       <div class="links" style="margin-top:10px;">
         <a href="rpatil_resume_DA.pdf" target="_blank" rel="noopener noreferrer">📄 Resume</a>
         <a href="https://www.linkedin.com/in/rohanpatil46/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/rohanpatil4600" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
 
-      <!-- Optional quick highlight tags -->
+      <!-- Quick highlight tags -->
       <div style="margin-top:10px;">
         <span class="tag">SQL (CTEs, Window Functions)</span>
         <span class="tag">Power BI (DAX, Star Schema)</span>
@@ -151,12 +212,12 @@
       </div>
     </div>
 
-    <!-- PHOTO -->
+    <!-- PHOTO (ensure this filename matches repo exactly) -->
     <img class="photo" src="IMG_5800.jpg" alt="Rohan Patil headshot">
   </div>
 
   <!-- SKILLS -->
-  <h2>Skills</h2>
+  <h2 id="skills">Skills</h2>
   <div class="skills">
     <div class="card">
       <div class="k">Analytics & BI</div>
@@ -209,33 +270,107 @@
   </div>
 
   <!-- CERTIFICATIONS -->
-  <h2>Certifications</h2>
+  <h2 id="certs">Certifications</h2>
   <div class="card">
     <a class="cert-btn"
        href="https://www.credly.com/badges/23154748-b36b-4eb6-9c97-6352892b0f49/public_url"
-       target="_blank"
-       rel="noopener noreferrer">
+       target="_blank" rel="noopener noreferrer">
       AWS Cloud Practitioner (CCP)
     </a>
-  
+
     <a class="cert-btn"
        href="https://www.credly.com/badges/574d12b6-5a79-4901-b6fb-0a62e7c56e63/public_url"
-       target="_blank"
-       rel="noopener noreferrer">
+       target="_blank" rel="noopener noreferrer">
       AWS AI Practitioner
     </a>
-  
+
     <a class="cert-btn"
        href="https://www.credly.com/badges/9d80e3f3-d2b3-4dd8-bc6e-eea07b65ab1b/public_url"
-       target="_blank"
-       rel="noopener noreferrer">
+       target="_blank" rel="noopener noreferrer">
       AWS Machine Learning Associate
     </a>
+
+    <p style="color:#555;font-size:14px;margin-top:10px;">
+      Click to view verified Credly badges.
+    </p>
   </div>
 
+  <!-- EXPERIENCE TIMELINE -->
+  <h2 id="experience">Professional Experience</h2>
+  <div class="timeline">
+
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-card">
+        <div class="t-header">
+          <div>
+            <div class="t-role">Operations Data Analyst</div>
+            <div class="t-org">Transportation & Parking Services (TAPS), Binghamton University</div>
+          </div>
+          <div class="t-date">Aug 2025 – Dec 2025</div>
+        </div>
+        <ul>
+          <li>Managed and analyzed permits, citations, and service requests (5K+ records/semester); reduced manual reconciliation by ~30% and saved ~8–10 hours/week.</li>
+          <li>Built KPIs and summary reports (volume trends, turnaround time, compliance rates); improved response visibility and reduced issue resolution time by ~20%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-card">
+        <div class="t-header">
+          <div>
+            <div class="t-role">Data Analyst / Data Scientist</div>
+            <div class="t-org">Manda Engineering, India</div>
+          </div>
+          <div class="t-date">Jan 2022 – Jul 2023</div>
+        </div>
+        <ul>
+          <li>Unified production, quality, and process data into an analytical layer; improved reporting accuracy and reduced manual data handling by ~40%.</li>
+          <li>Analyzed downtime and throughput variability; supported 10–15% efficiency gains through root-cause insights.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-card">
+        <div class="t-header">
+          <div>
+            <div class="t-role">Machine Learning Intern (Analyst-focused)</div>
+            <div class="t-org">Geofeatures Solutions, India</div>
+          </div>
+          <div class="t-date">Jun 2021 – Dec 2021</div>
+        </div>
+        <ul>
+          <li>Analyzed 15,000+ geospatial images and 3,000+ road segments; generated maintenance insights using clustering (K-Means, DBSCAN) and spatial analytics.</li>
+          <li>Classified road surfaces with 92% accuracy and built a severity scoring system to improve repair prioritization.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-card">
+        <div class="t-header">
+          <div>
+            <div class="t-role">Data Analyst Intern</div>
+            <div class="t-org">Extreme Apps, India</div>
+          </div>
+          <div class="t-date">Dec 2020 – May 2021</div>
+        </div>
+        <ul>
+          <li>Analyzed 2M+ user interactions across 50+ restaurant clients; reduced table-order times by 30% and boosted repeat engagement by 85%.</li>
+          <li>Built automated dashboards and SQL/Python pipelines; improved reporting efficiency and insight availability by 40%.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 
   <!-- PROJECTS -->
-  <h2>Projects</h2>
+  <h2 id="projects">Projects</h2>
   <div class="grid">
 
     <div class="proj">
@@ -279,20 +414,18 @@
 
   </div>
 
-  <!-- ABOUT -->
-  <h2>About</h2>
-  <div class="card">
-    <p>
-      Data Analyst / Data Scientist with hands-on experience in data modeling, ETL pipelines, and analytics workflows supporting operational and business 
-      decision-making. Skilled in SQL, Python, Power BI, and Tableau to translate complex datasets into actionable insights, performance optimization, and data-driven strategy.
-    </p>
-  </div>
-
   <!-- CONTACT -->
-  <h2>Contact</h2>
+  <h2 id="contact">Contact</h2>
   <div class="card">
     <p>📧 <a href="mailto:rohanpatil4600@gmail.com">rohanpatil4600@gmail.com</a></p>
   </div>
+
+  <footer style="margin:40px 0 10px; color:#777; font-size:14px;">
+    Built with GitHub Pages · © <span id="y"></span> Rohan Patil
+  </footer>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
