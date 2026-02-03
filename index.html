@@ -56,6 +56,27 @@
       white-space:nowrap;
     }
 
+    /* CERT BUTTONS */
+    .cert-btn{
+      display:inline-block;
+      padding:10px 18px;
+      border:1.5px solid #ddd;
+      border-radius:999px;
+      margin:8px 10px 0 0;
+      font-size:15px;
+      font-weight:500;
+      color:#111;
+      background:#fff;
+      transition: all 0.2s ease;
+      cursor:pointer;
+    }
+    .cert-btn:hover{
+      background:#f5f7ff;
+      border-color:var(--link);
+      color:var(--link);
+      text-decoration:none;
+    }
+
     /* CARDS / SECTIONS */
     .card{
       border:1px solid var(--border);
@@ -130,11 +151,11 @@
       </div>
     </div>
 
-    <!-- PHOTO: Upload "profile.jpg" to repo root (same level as index.html) -->
+    <!-- PHOTO -->
     <img class="photo" src="IMG_7380.JPG" alt="Rohan Patil headshot">
   </div>
 
-  <!-- SKILLS (elaborate like resume) -->
+  <!-- SKILLS -->
   <h2>Skills</h2>
   <div class="skills">
     <div class="card">
@@ -190,16 +211,33 @@
   <!-- CERTIFICATIONS -->
   <h2>Certifications</h2>
   <div class="card">
-    <span class="tag">AWS Cloud Practitioner (CCP)</span>
-    <span class="tag">AWS AI Practitioner</span>
-    <span class="tag">AWS Machine Learning Associate</span>
+    <a class="cert-btn"
+       href="https://www.credly.com/badges/23154748-b36b-4eb6-9c97-6352892b0f49/public_url"
+       target="_blank"
+       rel="noopener noreferrer">
+      AWS Cloud Practitioner (CCP)
+    </a>
+  
+    <a class="cert-btn"
+       href="https://www.credly.com/badges/574d12b6-5a79-4901-b6fb-0a62e7c56e63/public_url"
+       target="_blank"
+       rel="noopener noreferrer">
+      AWS AI Practitioner
+    </a>
+  
+    <a class="cert-btn"
+       href="https://www.credly.com/badges/9d80e3f3-d2b3-4dd8-bc6e-eea07b65ab1b/public_url"
+       target="_blank"
+       rel="noopener noreferrer">
+      AWS Machine Learning Associate
+    </a>
   </div>
+
 
   <!-- PROJECTS -->
   <h2>Projects</h2>
   <div class="grid">
 
-    <!-- 1 -->
     <div class="proj">
       <h3>Sales Performance Analytics Dashboard</h3>
       <p>Power BI sales analytics on 120K+ transactions with star schema, DAX measures (YoY%, MoM%, AOV, CLV), and automated refresh.</p>
@@ -210,7 +248,6 @@
       </p>
     </div>
 
-    <!-- 2 -->
     <div class="proj">
       <h3>Customer Churn Analysis & Retention Insights</h3>
       <p>EDA + cohort analysis + statistical testing to identify churn drivers and retention opportunities across customer segments.</p>
@@ -220,7 +257,6 @@
       </p>
     </div>
 
-    <!-- 3 -->
     <div class="proj">
       <h3>News Classification using NLP</h3>
       <p>Built a Flask web app to classify news as real/fake using NLP preprocessing and supervised learning.</p>
@@ -231,7 +267,6 @@
       </p>
     </div>
 
-    <!-- 4 -->
     <div class="proj">
       <h3>YouTube Comment Analyzer</h3>
       <p>Created a browser extension to summarize YouTube comments and show sentiment distribution with color-coded highlights.</p>
